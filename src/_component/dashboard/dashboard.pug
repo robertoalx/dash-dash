@@ -18,9 +18,11 @@
         each item in data.promotion
           .dashboard__grid
             .dashboard__svg
+              img(src=`${baseUrl}asset/image/ticket.svg`, alt="ticket")
             .dashboard__info
               .dashboard__description=item.description
               .dashboard__time=item.time
+            button.dashboard__watch Watch
 
   .dashboard__card--popular
     .dashboard__head

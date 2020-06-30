@@ -2,7 +2,7 @@
   transition: 250ms;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto repeat(2, 1fr);
+  grid-template-rows: auto auto 1fr;
   grid-gap: 20px;
   flex-grow: 1;
   padding: 20px;
@@ -30,6 +30,7 @@
       color: #585d6d;
       font-size: 13px;
       font-weight: 500;
+      margin-bottom: 17px;
     }
 
     [for="prepared-for-modal"] {
@@ -67,6 +68,55 @@
     animation-name: shake;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+  }
+
+  &__grid {
+    display: grid;
+    height: 85px;
+    grid-gap: 24px;
+    grid-template-columns: auto 1fr auto;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #fff6de;
+      top: 0;
+      bottom: 0;
+      left: -20px;
+      right: -20px;
+      z-index: -1;
+      transform: scaleX(0) skewX(80deg);
+      transition: 250ms;
+      transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+
+    &:hover::before {
+      content: "";
+      position: absolute;
+      background-color: #fff6de;
+      top: 0;
+      bottom: 0;
+      left: -20px;
+      right: -20px;
+      z-index: -1;
+      transform: scaleX(3) skewX(80deg);
+    }
+  }
+
+  &__list {
+    width: 100%;
+  }
+
+  &__svg,
+  &__info,
+  &__watch {
+    align-self: center;
+  }
+
+  &__watch {
+    color: white;
+    padding: 0 19px;
   }
 }
 
