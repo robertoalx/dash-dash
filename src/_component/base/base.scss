@@ -8,5 +8,16 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #f2f6f9;
+}
+
+body,
+html,
+.content {
   height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
