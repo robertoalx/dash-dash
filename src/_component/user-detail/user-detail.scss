@@ -29,7 +29,8 @@
 
 .user-detail {
   padding: 10px 20px 20px;
-  background-color: rgba($color: #fff, $alpha: 0.05);
+  transition: 250ms;
+  background-color: rgba($color: #fff, $alpha: 0);
   &__star {
     background: url("#{$baseUrl}asset/image/star.svg");
     display: block;
@@ -119,6 +120,7 @@ button {
     font-size: 24px;
     line-height: px;
     font-weight: 500;
+    margin-bottom: 10px;
   }
 
   &bar--blue,

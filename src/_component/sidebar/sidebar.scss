@@ -101,6 +101,10 @@
   .sidebar__user-label {
     display: flex;
   }
+
+  .user-detail {
+    background-color: rgba($color: #fff, $alpha: 0.05);
+  }
 }
 
 .sidebar-input {
