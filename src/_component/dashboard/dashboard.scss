@@ -60,11 +60,47 @@
       grid-column: 2/-1;
     }
   }
+
+  &__button {
+    font-weight: 700;
+    color: white;
+    animation-name: shake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes shake {
+  from,
+  to,
+  85% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  86%,
+  88%,
+  90%,
+  92%,
+  94%,
+  96%,
+  98% {
+    transform: translate3d(7px, 3px, 0);
+  }
+
+  87%,
+  89%,
+  91%,
+  93%,
+  95%,
+  97%,
+  99% {
+    transform: translate3d(-7px, 3px, 0);
+  }
 }
 
 [class^="dashboard__card"] {
   background-color: white;
-  padding: 10px 20px;
+  padding: 20px;
   clip-path: polygon(
     15px 0,
     calc(100% - 15px) 0,
