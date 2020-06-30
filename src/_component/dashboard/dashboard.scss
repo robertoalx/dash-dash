@@ -1,11 +1,65 @@
 .dashboard {
   margin-left: 120px;
   transition: 250ms;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto repeat(2, 1fr);
+  grid-gap: 20px;
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__header {
+    grid-column: 1/-1;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+
+    .dashboard__title {
+      text-transform: uppercase;
+      color: #585d6d;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    [for="prepared-for-modal"] {
+      border-bottom: 1px solid #000;
+      font-size: 14px;
+      color: #141414;
+      font-weight: 500;
+    }
+  }
+
+  &__hero-title {
+    font-size: 72px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card-- {
+    &mega {
+      grid-row: 2/-1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &promotion {
+      grid-column: 2/-1;
+    }
+  }
 }
 
-.dashboard__mega-card,
-.dashboard__promotion-card {
-  background-color: black;
+[class^="dashboard__card"] {
+  background-color: white;
+  padding: 10px 20px;
   clip-path: polygon(
     15px 0,
     calc(100% - 15px) 0,
@@ -16,5 +70,4 @@
     0 calc(100% - 15px),
     0 15px
   );
-  margin: 20px;
 }

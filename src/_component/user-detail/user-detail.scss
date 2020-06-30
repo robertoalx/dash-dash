@@ -1,6 +1,6 @@
 .user-detail__icon-wrapper {
   position: relative;
-  margin-top: 44px;
+  margin: 44px auto 80px;
   display: flex;
   justify-content: center;
 
@@ -51,6 +51,11 @@
       font-weight: bold;
     }
   }
+
+  .button__wrapper {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
 }
 
 button[class^="button__normal--"],
@@ -75,10 +80,10 @@ button[class^="button__normal--"] {
 }
 
 button {
-  margin: 80px -20px 0 -20px;
+  // margin: 0 -20px 0 -20px;
   background-color: #00bd71;
   border: 0;
-  width: 70px;
+  width: 100%;
   height: 36px;
   border-radius: 6px;
 

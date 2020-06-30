@@ -1,21 +1,35 @@
-.dashboard
-  .dashboard__mega-card
+.dashboard 
+  h1.dashboard__header Dashboard 
+  .dashboard__card--mega
     .dashboard__head
       .dashboard__title Current Score
       label(for="prepared-for-modal") Add New Update
     .dashboard__body
-      | 1,846
+      .dashboard__hero-title 1,846
     .dashboard__footer
       button.dashboard__button Claim Bonus
 
-  .dashboard__promotion-card
+  .dashboard__card--promotion
     .dashboard__head
-    .dashboard__title My Promotions
-    .dashboard__list
-      //- =JSON.stringify( Object.keys(data.promotion))
-      each item in data.promotion
-        .dashboard__grid
-          .dashboard__svg
-          .dashboard__info
-            .dashboard__description=item.description
-            .dashboard__time=item.time
+      .dashboard__title My Promotions
+    .dashboard__body
+      .dashboard__list
+        //- =JSON.stringify( Object.keys(data.promotion))
+        each item in data.promotion
+          .dashboard__grid
+            .dashboard__svg
+            .dashboard__info
+              .dashboard__description=item.description
+              .dashboard__time=item.time
+
+  .dashboard__card--popular
+    .dashboard__head
+      .dashboard__title my popular movies
+    .dashboard__body
+      .dashboard__list
+
+  .dashboard__card--random
+    .dashboard__body
+      .dashboard__list
+    .dashboard__footer
+      button.dashboard__button Claim Bonus
