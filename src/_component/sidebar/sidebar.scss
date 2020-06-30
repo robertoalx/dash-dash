@@ -96,6 +96,15 @@
   display: none;
 }
 
+#sidebar-collaps:checked + .sidebar {
+  .sidebar__user-name,
+  .xp__bar--blue,
+  .hr,
+  .sidebar__user-label {
+    display: flex;
+  }
+}
+
 .sidebar-input {
   &:checked {
     ~ .dashboard {
@@ -132,7 +141,7 @@
         transform: 250ms;
       }
 
-      .dash-clock::before {
+      a[class^="dash-"]::before {
         margin-left: 16px;
       }
 

@@ -51,8 +51,11 @@
   }
 }
 
-.sidebar__user-wrapper,
-button[class^="button__normal--"] {
+button[class^="button__normal--"],
+.sidebar__user-wrapper .sidebar__user-label,
+.sidebar__user-wrapper .xp__bar--blue,
+.sidebar__user-wrapper .hr,
+.sidebar__user-wrapper .sidebar__user-name {
   display: none;
 }
 
