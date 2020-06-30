@@ -1,0 +1,76 @@
+@import "variables";
+
+@font-face {
+  font-family: "#{$icomoon-font-family}";
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?k46utb")
+      format("truetype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?k46utb")
+      format("woff"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?k46utb##{$icomoon-font-family}")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon__"],
+[class*=" icon__"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "#{$icomoon-font-family}" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon__arrow-down {
+  &:before {
+    content: $icon__arrow-down;
+  }
+}
+.icon__arrow-left {
+  &:before {
+    content: $icon__arrow-left;
+  }
+}
+.icon__arrow-right {
+  &:before {
+    content: $icon__arrow-right;
+  }
+}
+.icon__plus {
+  &:before {
+    content: $icon__plus;
+  }
+}
+.icon__cinema {
+  &:before {
+    content: $icon__cinema;
+  }
+}
+.icon__clock {
+  &:before {
+    content: $icon__clock;
+  }
+}
+.icon__gift-heart {
+  &:before {
+    content: $icon__gift-heart;
+  }
+}
+.icon__horn {
+  &:before {
+    content: $icon__horn;
+  }
+}
+.icon__user {
+  &:before {
+    content: $icon__user;
+  }
+}

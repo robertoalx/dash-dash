@@ -1,0 +1,28 @@
+.user-detail
+  input(
+    type="checkbox",
+    id="collaps-user-detail"
+  )
+  .sidebar__user-wrapper
+    .user-detail__star(attr-number="8")
+    .sidebar__user-name John Smith
+    label.sidebar__user-label(for="collaps-user-detail")
+      .icon__arrow-down
+    .xp__bar--blue 
+    .hr
+  .xp-wrapper
+    .xp__total 1,846
+    .xp__bar--grey
+    .numestel__cum-vrei-tu-wrapper
+      .xp__number 1,403
+      .xp__number 546
+    .numestel__cum-vrei-tu-wrapper
+      .xp__text XP gained
+      .xp__text XP until next level
+  .user-detail__icon-wrapper
+    .icon__cinema
+    +tooltip('1,846')
+  .button__wrapper
+    button.icon__plus
+    button.button__normal--grey Button
+    button.button__normal--green Button

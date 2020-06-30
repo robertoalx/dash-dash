@@ -1,0 +1,21 @@
+.dashboard
+  .dashboard__mega-card
+    .dashboard__head
+      .dashboard__title Current Score
+      label(for="prepared-for-modal") Add New Update
+    .dashboard__body
+      | 1,846
+    .dashboard__footer
+      button.dashboard__button Claim Bonus
+
+  .dashboard__promotion-card
+    .dashboard__head
+    .dashboard__title My Promotions
+    .dashboard__list
+      //- =JSON.stringify( Object.keys(data.promotion))
+      each item in data.promotion
+        .dashboard__grid
+          .dashboard__svg
+          .dashboard__info
+            .dashboard__description=item.description
+            .dashboard__time=item.time
