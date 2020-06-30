@@ -2,20 +2,13 @@ input.sidebar-input( type="checkbox", id="sidebar-collaps")
 .sidebar
   .sidebar__account-wrapper
     label.sidebar__menu-square(for="sidebar-collaps")
-      .icon__arrow-right
+      .dash-chevron-left
     .sidebar__account My Account
 
   .sidebar__user-account
     include ../user-detail/user-detail
 
   nav.sidebar-menu
-    a.icon__clock(href='#')
-      span.sidebar-name Menu Item
-    a.icon__clock(href='#')
-      span.sidebar-name Menu Item
-    a.icon__clock(href='#')
-      span.sidebar-name Menu Item
-    a.icon__clock(href='#')
-      span.sidebar-name Menu Item
-    a.icon__clock(href='#')
-      span.sidebar-name Menu Item
+    each item in data.sidebar.menu
+      a(href='#' class=`dash-${item.icon}`)
+        span.sidebar-name=item.description

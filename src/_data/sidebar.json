@@ -1,0 +1,24 @@
+{
+  "menu": [
+    {
+      "icon": "stats",
+      "description": "Menu Item"
+    },
+    {
+      "icon": "clock",
+      "description": "Menu Item"
+    },
+    {
+      "icon": "present",
+      "description": "Menu Item"
+    },
+    {
+      "icon": "user",
+      "description": "Menu Item"
+    },
+    {
+      "icon": "horn",
+      "description": "Menu Item"
+    }
+  ]
+}

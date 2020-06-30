@@ -19,7 +19,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  bottom: 0;
   flex-direction: column;
   transition: 250ms;
 
@@ -31,6 +31,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transform: rotate(180deg);
   }
 }
 
@@ -104,14 +106,14 @@
       width: 262px;
 
       & .sidebar__menu-square {
-        transform: rotate(180deg);
+        transform: rotate(0);
       }
       &.sidebar__user-label {
         transform: rotate(180deg);
       }
 
       .user-detail__icon-wrapper,
-      button.icon__plus {
+      button.dash-plus {
         display: none;
       }
 
@@ -130,7 +132,7 @@
         transform: 250ms;
       }
 
-      .icon__clock::before {
+      .dash-clock::before {
         margin-left: 16px;
       }
 
@@ -149,8 +151,13 @@
 #collaps-user-detail {
   display: none;
 
-  &:checked ~ .xp-wrapper {
-    height: 0;
-    overflow: hidden;
+  &:checked {
+    & + .sidebar__user-wrapper .sidebar__user-label {
+      transform: rotate(-90deg);
+    }
+    & ~ .xp-wrapper {
+      height: 0;
+      overflow: hidden;
+    }
   }
 }

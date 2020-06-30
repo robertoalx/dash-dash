@@ -1,22 +1,19 @@
 @import "variables";
 
 @font-face {
-  font-family: "#{$icomoon-font-family}";
-  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?k46utb")
-      format("truetype"),
-    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?k46utb")
-      format("woff"),
-    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?k46utb##{$icomoon-font-family}")
-      format("svg");
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$baseUrl}#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?maumu0') format('truetype'),
+    url('#{$baseUrl}#{$icomoon-font-path}/#{$icomoon-font-family}.woff?maumu0') format('woff'),
+    url('#{$baseUrl}#{$icomoon-font-path}/#{$icomoon-font-family}.svg?maumu0##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon__"],
-[class*=" icon__"] {
+[class^="dash-"], [class*=" dash-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "#{$icomoon-font-family}" !important;
+  font-family: '#{$icomoon-font-family}' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -29,48 +26,50 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon__arrow-down {
+.dash-plus {
   &:before {
-    content: $icon__arrow-down;
+    content: $dash-plus; 
   }
 }
-.icon__arrow-left {
+.dash-chevron-left {
   &:before {
-    content: $icon__arrow-left;
+    content: $dash-chevron-left; 
   }
 }
-.icon__arrow-right {
+.dash-cinema {
   &:before {
-    content: $icon__arrow-right;
+    content: $dash-cinema; 
   }
 }
-.icon__plus {
+.dash-clock {
   &:before {
-    content: $icon__plus;
+    content: $dash-clock; 
   }
 }
-.icon__cinema {
+.dash-horn {
   &:before {
-    content: $icon__cinema;
+    content: $dash-horn; 
   }
 }
-.icon__clock {
+.dash-play {
   &:before {
-    content: $icon__clock;
+    content: $dash-play;     
+    color: #585d6d;
   }
 }
-.icon__gift-heart {
+.dash-present {
   &:before {
-    content: $icon__gift-heart;
+    content: $dash-present; 
   }
 }
-.icon__horn {
+.dash-stats {
   &:before {
-    content: $icon__horn;
+    content: $dash-stats; 
   }
 }
-.icon__user {
+.dash-user {
   &:before {
-    content: $icon__user;
+    content: $dash-user; 
   }
 }
+
