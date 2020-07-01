@@ -169,3 +169,13 @@
     }
   }
 }
+
+#flippy {
+  display: none;
+
+  &:checked {
+    & + .dashboard__card--random {
+      animation: 500ms flip;
+    }
+  }
+}
