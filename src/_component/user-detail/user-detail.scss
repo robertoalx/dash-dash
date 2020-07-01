@@ -79,8 +79,14 @@ button[class^="button__normal--"] {
   background-color: #4f5168;
 }
 
-button {
+button,
+label.button__normal--green {
   background-color: #00bd71;
+}
+
+label.button__normal--grey,
+label.button__normal--green {
+  color: white;
 }
 
 label.dashboard__random-button {
@@ -93,6 +99,8 @@ label.dashboard__random-button {
 }
 
 button,
+label.button__normal--green,
+label.button__normal--grey,
 .dashboard__random-button {
   border: 0;
   width: 100%;
