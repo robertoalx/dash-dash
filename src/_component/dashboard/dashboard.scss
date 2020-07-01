@@ -6,6 +6,7 @@
   grid-gap: 20px;
   flex-grow: 1;
   padding: 20px;
+  align-self: flex-start;
 
   &__body {
     flex-grow: 1;
@@ -24,13 +25,15 @@
   &__head {
     display: flex;
     justify-content: space-between;
+    height: 33px;
+    align-items: flex-start;
 
     .dashboard__title {
       text-transform: uppercase;
       color: #585d6d;
       font-size: 13px;
       font-weight: 500;
-      margin-bottom: 17px;
+      // margin-bottom: 17px;
     }
 
     [for="prepared-for-modal"] {
@@ -108,6 +111,14 @@
     width: 100%;
   }
 
+  &__popular-list {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 300px;
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+
   &__svg,
   &__info,
   &__watch {
@@ -117,6 +128,66 @@
   &__watch {
     color: white;
     padding: 0 19px;
+  }
+
+  &__popular-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 15px;
+    padding: 5px 0 5px 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0px;
+      right: 0px;
+      background-color: transparent;
+      z-index: -1;
+      transition: 250ms;
+    }
+
+    &:hover::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -20px;
+      right: -20px;
+      background-color: #f2f6f9;
+      z-index: -1;
+    }
+  }
+
+  &__popular-play {
+    grid-column: 3;
+    width: 40px;
+    height: 40px;
+    background-color: #d5dee7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  &__popular-title {
+    color: #141414;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  &__popular-time {
+    color: #585d6d;
+    font-size: 12px;
+  }
+
+  &__popular-info,
+  &__popular-image,
+  &__popular-play {
+    align-self: center;
   }
 }
 

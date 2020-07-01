@@ -28,7 +28,16 @@
     .dashboard__head
       .dashboard__title my popular movies
     .dashboard__body
-      .dashboard__list
+      .dashboard__popular-list
+        each popular in data.popular
+          .dashboard__popular-grid
+            .dashboard__popular-image
+              img(src=`${baseUrl}asset/image/${popular.imageUrl}`, alt="")
+            .dashboard__popular-info
+              .dashboard__popular-title=popular.title
+              .dashboard__popular-time View time: #{popular.time}
+            .dashboard__popular-play
+              .dash-play
 
   .dashboard__card--random
     .dashboard__body
