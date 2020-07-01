@@ -39,7 +39,8 @@
             .dashboard__popular-play
               .dash-play
 
-  input(type="checkbox" id="flippy").sidebar-input
+  input(type="radio" name="flip" id="flippy-1" checked)
+  input(type="radio" name="flip" id="flippy-2")
   .dashboard__card--random
     .dashboard__body
       .dashboard__random-smiley
@@ -47,4 +48,5 @@
       .dashboard__random-title JUST A RANDOM CARD
       .dashboard__random-description Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
     .dashboard__footer
-      label(for="flippy").dashboard__random-button click to flip the card
+      label(for="flippy-1").dashboard__random-button click to flip the card
+      label(for="flippy-2").dashboard__random-button click to flip the card

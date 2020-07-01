@@ -170,12 +170,30 @@
   }
 }
 
-#flippy {
+#flippy-1 {
   display: none;
 
   &:checked {
-    & + .dashboard__card--random {
-      animation: 500ms flip;
+    & ~ .dashboard__card--random {
+      animation: 500ms flip1;
+
+      label[for="flippy-1"] {
+        display: none;
+      }
+    }
+  }
+}
+
+#flippy-2 {
+  display: none;
+
+  &:checked {
+    & ~ .dashboard__card--random {
+      animation: 500ms flip2;
+
+      label[for="flippy-2"] {
+        display: none;
+      }
     }
   }
 }
