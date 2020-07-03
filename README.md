@@ -2,26 +2,19 @@
 
 # Pug starter
 
-## Table of contents
-
-- [YouTube video tutorials](#youtube-video-tutorials)
-- [Live projects built with pug-starter](#live-projects-built-with-pug-starter)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Style](#style)
-
 ## **baseUrl**
 
 Note: `inline` attribute has been updated to `embed`
 
 Old way:
+
 ```
 if config.entry.css.embed
   link(rel="stylesheet" href=`${embedPath}` inline)
 ```
 
 New way:
+
 ```
 if config.entry.css.embed
   link(rel="stylesheet" href=`${embedPath}` embed)
@@ -56,49 +49,6 @@ or
 ```
 img(alt="Awesome dog" width="100" href=`${baseUrl}/image/cool-dog.jpg`)
 ```
-
-## YouTube video tutorials
-
-I want to change those tutorials to new ones using the new techniques.
-
-To help you out even more I've put together some YouTube tutorials:
-
-- Install nodejs, git and github
-
-[![Install nodejs, git and github](http://img.youtube.com/vi/A-iTEtt6SN8/0.jpg)](http://www.youtube.com/watch?v=A-iTEtt6SN8)
-
-- How to make a website for free in 3 easy steps 2017
-
-[![How to make a website for free in 3 easy steps 2017 - CodeTap](http://img.youtube.com/vi/YBK5ZyXHumE/0.jpg)](http://www.youtube.com/watch?v=YBK5ZyXHumE)
-
-- The nightmare is finally over! HTML5 tutorial on how to build a webpage layout 2017
-
-[![The nightmare is finally over! HTML5 tutorial on how to build a webpage layout 2017 - CodeTap](http://img.youtube.com/vi/DdYC36N9z0E/0.jpg)](http://www.youtube.com/watch?v=DdYC36N9z0E)
-
-- Build HTML5 website pain free tutorial for beginners 2017
-
-[![Build HTML5 website pain free tutorial for beginners 2017](http://img.youtube.com/vi/qCyokdeZ6jI/0.jpg)](http://www.youtube.com/watch?v=qCyokdeZ6jI)
-
-Starter package for pug (former jade) template based projects.
-
-**_Note_**: an boolean option **config.render.sourceFileChange** has been added to the _package.json_. The behaviour differs based on the value:
-
-1. **true** - it renders if the source file (pug file) has been changed; This has a much much greater speed when rendering compared to the other option however it's only relevant if you make change to the current file watched by PUG. If you make a change to a file that's extended and resides in a path that contains "\_", like a layout one, the change won't be reflected.
-2. **false** - it renders if any pug file has been changed and compares the output with the destination file (the HTML generated now with the previous generated HTML). This can be slower when the number of files increases.
-
-## Live projects built with **_pug-starter_**
-
-If you want your project to be listed here leave a message on [CodeTap on FaceBook](https://facebook.com/codetap). You're project needs to be at least version one final (no beta / alpha or work in progress) will be accepted.
-
-- Author: [Marian Zburlea](https://github.com/marianzburlea)
-  - [Eat the Veggie (live)](http://codetapio.github.io/eat-the-veggie) - [Eat the Veggie (source)](https://github.com/codetapio/eat-the-veggie)
-  - [W3schools Replica (live)](http://codetapio.github.io/w3schools-replica) - [W3schools Replica (source)](https://github.com/codetapio/w3schools-replica)
-  - [My Resume (live)](http://my-resume.bitbee.uk) - [My Resume (source)](https://github.com/marianzburlea/my-resume)
-  - [Quick Blog (live)](http://quick-blog.bitbee.uk) - [Quick Blog (source)](https://github.com/marianzburlea/quick-blog)
-  - [Tesla Saves Lives (live)](http://tesla.bitbee.uk) - [Tesla Saves Lives (source)](https://github.com/marianzburlea/tesla-saves-lives)
-- Author: [Istvan Acs](https://github.com/St3ve89)
-  - [Acme mobile first (live)](http://St3ve89.github.io/Acme-mobile-first) - [Acme mobile first (source)](https://github.com/St3ve89/Acme-mobile-first)
-  - [Thumb Gallery (live)](http://St3ve89.github.io/thumbgallery) - [Thumb Gallery (source)](https://github.com/St3ve89/thumbgallery)
 
 ## Prerequisites
 
